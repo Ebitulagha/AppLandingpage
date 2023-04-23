@@ -27,14 +27,21 @@
     <module>server</module>
     <module>webapp</module>
   </modules>
-
+         
   <distributionManagement>
-    <site>
-      <id>site-server</id>
-      <name>Test Project Site</name>
-      <url>file:///tmp/maven-project-site</url>
-    </site>
-  </distributionManagement>
+      <repository>
+      <id>nexus</id>
+      <name>Landmark Technologies Releases Nexus Repository</name>
+      <url>http://http://3.88.180.25:8081/repository/mwa-releases/</url>
+    </repository>
+           
+      <snapshotRepository>
+       <id>nexus</id>
+       <name>Landmark Technologies Snapshot Nexus Repository </name>
+       <url>http://3.88.180.25:8081/repository/mwa-snapshot/</url>
+       </snapshotRepository>
+	    
+   </distributionManagement>
 
   <build>
     <plugins>
